@@ -8,19 +8,19 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import me.shota.bean.User;
-import me.shota.dao.UserDao;
+import me.shota.mapper.UserMapper;
 import me.shota.service.UserService;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
 	
 	@Resource
-	private UserDao userDao;
+	private UserMapper userMapper;
 	
 	@Override
 	public List<User> getAllUserList(Map<String, Object> map) {
 		// TODO Auto-generated method stub
-		return userDao.getAllUserList(map);
+		return userMapper.getAllUserList(map);
 	}
 
 }
